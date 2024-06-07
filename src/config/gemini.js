@@ -16,7 +16,7 @@ import  {
     HarmBlockThreshold,
   } from "@google/generative-ai";
   
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
@@ -59,8 +59,9 @@ import  {
     });
   
     const result = await chatSession.sendMessage(prompt);
-    const reponse = result.response;
-    console.log(result.response.text());
+    const response = result.response;
+    console.log(response.text());
+    return response.text();
   }
   
   export default run;
