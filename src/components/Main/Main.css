@@ -149,3 +149,35 @@
     gap: 20px;
     align-items: start;
 }
+
+.result-response p{
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap: 20px;
+}
+
+.loader hr{
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right,#4b90ff,#ffffff,#4b90d2) ;
+    background-size: 800px 50px;
+    animation: loader 3 infinite linear;
+}
+
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
